@@ -1,27 +1,21 @@
-# RoomFrontend
+# Room frontend (Angular application) - Eduardo Barbosa da Costa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
+***Setup***
+* docker, kubernetes and angular-cli;
 
-## Development server
+***Run***
+* On the command line on the project root:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. *ng build -prod*
+2. *docker build . -t eduardobarbosa/app-frontend:1.0*
+3. *docker-compose up -d*
+4. *docker network connect jwtservice_default app-frontend*
+5. *docker network connect roomservice_default app-frontend*
+6. *docker restart app-frontend*
+The endpoints will be available in: http://<docker host>:80
 
-## Code scaffolding
+* On kubernetes
+3. *kubectl create -f .*
+The endpoints will be available in: http://<cluster IP>:80
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

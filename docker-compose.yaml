@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+  app-frontend:
+    container_name: frontend-service
+    image: eduardobarbosa/frontend-service:1.0
+    ports:
+      - "80:80"
