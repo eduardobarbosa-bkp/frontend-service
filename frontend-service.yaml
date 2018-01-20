@@ -15,7 +15,7 @@ spec:
     targetPort: 80
   selector:
     io.kompose.service: frontend-service
-  type: LoadBalancer	
+  type: LoadBalancer
 status:
   loadBalancer: {}
 ---
@@ -39,7 +39,7 @@ spec:
         io.kompose.service: frontend-service
     spec:
       containers:
-      - image: eduardobarbosa/frontend-service:1.0
+      - image: gcr.io/scratch-microservice/frontend-service:v1
         name: frontend-service
         ports:
         - containerPort: 80
@@ -47,4 +47,4 @@ spec:
       restartPolicy: Always
 status: {}
 
-  
+

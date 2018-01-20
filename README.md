@@ -8,7 +8,7 @@ m frontend (Angular application) - Eduardo Barbosa da Costa
 
 1. *npm install*
 2. *ng build -prod*
-3. *docker build . -t eduardobarbosa/frontend-service:1.0*
+3. *docker build . -t gcr.io/scratch-microservice/frontend-service:v1*
 4. *docker-compose up -d*
 5. *docker network connect jwtservice_default frontend-service*
 6. *docker network connect roomservice_default frontend-service*
